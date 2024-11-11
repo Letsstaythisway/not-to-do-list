@@ -16,14 +16,99 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <style>
+      .wrapper {
+        background: linear-gradient(
+          rgba(157, 172, 103, 0.993),
+          rgba(102, 172, 168, 0.329)
+        );
+        min-height: 100vh;
+      }
+
+      .table {
+        --bs-table-bg: transparent;
+      }
+    </style>
+
+    <title>NOT TO DO LIST</title>
   </head>
-  <body>
+  <body
     <div class="wrapper">
-      <button class="btn btn-danger">Click Me</button>
-      <i class="fa-solid fa-house"></i><i class="fa-solid fa-house"></i
-      ><i class="fa-solid fa-house"></i>
+      <!-- title -->
+      <div class="container">
+        <h1 class="text-center mt-5">NOT TO DO LIST</h1>
+
+        <!-- Form Tag -->
+         <form action="" class="border p-5 rounded shadow-lg mt-5">
+          <div class="row g-2">
+            <div class="col-md-7">
+            <input type="text" class="form-control" placeholder="Task" aria-label="FirstName" name="Task">
+          </div>
+          <div class="col-md-2">
+            <input type="number" class="form-control" placeholder="40" aria-label="LastName" name="hr" min="1">
+          </div>
+          <div class="col-md-3 d-grid">
+            <button class="btn btn-primary">Add New Tasks
+
+            </button>
+          </div>
+            </div>
+          
+         </form>
+
+         <!-- Tables -->
+          <div class="row mt-5">
+            <div class="col-md text-center"><h3>Entry List</h3>
+            <hr>
+            <table class="table table-striped table-hover border">
+              <tbody>
+                <tr>
+                  <td >1</td>
+                  <td>Subodh</td>
+                  <td>40</td>
+                  <td class="text-end">
+                    <button class="btn btn-danger
+                    "><i class="fa-solid fa-trash"></i></button>
+                    <button class="btn btn-success
+                    "><i class="fa-solid fa-arrow-right"></i></button>
+                  </td>
+                </tr>
+              
+          
+              </tbody>
+            </table>
+            
+          </div>
+          <div class="col-md text-center"><h3>Bad List</h3>
+            <hr>
+            <table class="table table-striped table-hover border">
+              <tbody>
+                <tr>
+                  <td >1</td>
+                  <td>Subodh</td>
+                  <td>40</td>
+                  <td class="text-end">
+                 
+                    <button class="btn btn-warning
+                    "><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="btn btn-danger
+                    "><i class="fa-solid fa-trash"></i></button>
+                  </td>
+                </tr>
+              
+          
+              </tbody>
+            </table>
+            <div class="alert alert-sucess">You could have saved = 50hrs</div>
+           
+          </div>
+          <div class="alert alert-success">The total hours allocated is 150hours</div>
+
+           
+            <hr></div>
+          </div>
+
+      </div>
     </div>
 
     <script
