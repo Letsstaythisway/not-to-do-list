@@ -1,12 +1,7 @@
 .wrapper {
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(rgb(4, 172, 130));
 }
-
-.container {
-  width: 400px;
-  height: 500px;
-  padding: 10px;
-  background-color: red;
+body {
+  background: linear-gradient(rgb(4, 172, 130));
 }
