@@ -1,0 +1,12 @@
+.wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  padding: 10px;
+  background-color: red;
+}
