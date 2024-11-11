@@ -1,7 +1,4 @@
 .wrapper {
   height: 100vh;
-  background: linear-gradient(rgb(4, 172, 130));
-}
-body {
-  background: linear-gradient(rgb(4, 172, 130));
+  background-color: rgba(118, 228, 220, 0.747);
 }
