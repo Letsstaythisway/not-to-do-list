@@ -32,37 +32,35 @@
 
     <title>NOT TO DO LIST</title>
   </head>
-  <body
+  <body>
     <div class="wrapper">
       <!-- title -->
       <div class="container">
-        <h1 class="text-center mt-5">NOT TO DO LIST</h1>
+        <h1 class="text-center p-5">NOT TO DO LIST</h1>
 
         <!-- Form Tag -->
-         <form action="" class="border p-5 rounded shadow-lg mt-5">
           <div class="row g-2">
             <div class="col-md-7">
-            <input type="text" class="form-control" placeholder="Task" aria-label="FirstName" name="Task">
+            <input type="text" class="form-control" placeholder="Task" aria-label="FirstName" name="Task" id="task">
           </div>
           <div class="col-md-2">
-            <input type="number" class="form-control" placeholder="40" aria-label="LastName" name="hr" min="1">
+            <input type="number" class="form-control" placeholder="40" aria-label="LastName" name="hr" min="1" id="hour">
           </div>
           <div class="col-md-3 d-grid">
-            <button class="btn btn-primary">Add New Tasks
+            <button class="btn btn-primary" id="addTask" onclick="addTask()">Add New Tasks
 
             </button>
           </div>
             </div>
           
-         </form>
 
          <!-- Tables -->
           <div class="row mt-5">
             <div class="col-md text-center"><h3>Entry List</h3>
             <hr>
             <table class="table table-striped table-hover border">
-              <tbody>
-                <tr>
+              <tbody id="entry-list">
+                <!-- <tr>
                   <td >1</td>
                   <td>Subodh</td>
                   <td>40</td>
@@ -72,7 +70,7 @@
                     <button class="btn btn-success
                     "><i class="fa-solid fa-arrow-right"></i></button>
                   </td>
-                </tr>
+                </tr> -->
               
           
               </tbody>
@@ -99,7 +97,8 @@
           
               </tbody>
             </table>
-            <div class="alert alert-sucess">You could have saved = 50hrs</div>
+
+            <div class="alert alert-success">You could have saved = 50hrs</div>
            
           </div>
           <div class="alert alert-success">The total hours allocated is 150hours</div>
@@ -116,5 +115,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
