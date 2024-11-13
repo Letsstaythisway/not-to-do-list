@@ -39,12 +39,21 @@ const addTask = () => {
     const taskObject = {
       id: randomIdGenerator(),
       task: taskField.value,
-      hour: hourField.value,
+      hour: parseInt(hourField.value),
       type: "entry",
     };
 
+    if (taskObject.hour + calculateTotalhour() <= WEEKLY_ALLOCATION) {
+      taskList.push;
+    }
     taskList.push(taskObject);
     displayTask();
+    const totalLiveExample = document.getElementById("liveToast");
+
+    const toastBootstrap =
+      bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+
+    toastBootstrap.show();
   } else {
     alert("Please enter task or hour!!");
   }
@@ -98,6 +107,13 @@ const displayTask = () => {
     goodListElement.innerHTML = goodListElement.innerHTML + goodTrValue;
     badListElement.innerHTML = badListElement.innerHTML + badTrValue;
   });
+
+  const totalHourSpan = document.getElementById("totalHours");
+
+  totalHourSpan.innerText = calculateTotalhour();
+
+  const badHourSpan = document.getElementById("badHour");
+  badHourSpan.innerText = calculatebadHour();
 };
 
 // change type from entry -> bad or bad -> entry
@@ -116,6 +132,18 @@ const deleteTask = (id) => {
     return item.id !== id;
   });
   displayTask();
+};
+
+const calculateTotalhour = () => {
+  let totalHour = taskList.reduce((acc, item) => acc + item.hour, 0);
+  return totalHour;
+};
+
+const calculatebadHour = () => {
+  let badHour = taskList.reduce((acc, item) => {
+    return acc + (item.type == "bad" ? item.hour : 0);
+  }, 0);
+  return badHour;
 };
 displayTask();
 
